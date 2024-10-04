@@ -42,10 +42,19 @@ header > ul > li > a {
     padding:0.3em 0.3em;
 }
 
+header > ul > li > a:hover {
+    display: block;
+    font-size: 2rem;
+    padding:0.3em 0.3em;
+    background-color: #6e1d28;
+    transition-duration: 0.3s;
+}
+
 a {
     text-decoration: none;
     color: white;
 }
+
 
 #welcome-section {
     height: 100vh;
@@ -97,7 +106,7 @@ h1 {
     margin-bottom: 3rem;
 }
 
-.project-tile {
+.project-title {
     margin-bottom: 20px;
     border-radius: 0px 0px 30px 30px;
     width: 100%;
@@ -111,14 +120,35 @@ h1 {
     object-fit: cover;
 }
 
-.project-tile > a {
+.project-title > a {
     text-decoration: none;
 }
 
-.project-tile > p {
+.project-title > p {
     color:white;
     font-size: 1.5rem;
+    display: flex;
 }
+
+.p-title{
+    color: white;
+    display: flex;
+}
+
+.code{
+    color:  #45567d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-title, .code:hover{
+    color:  orange;
+    transition-duration: 0.8s;
+}
+
+
+
 
 .show-all {
     color:white;
@@ -136,6 +166,7 @@ h1 {
 
 .show-all:hover{
     background: #be3144;
+    transition-duration: 1s;
 }
 
 #contact {
@@ -211,3 +242,5 @@ footer {
         margin: 0 auto;
     }
 }
+
+
