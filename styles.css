@@ -1,46 +1,210 @@
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-</style>
 
-*, ::after, ::before{
-  padding: 0;
-  margin: 0;
-  display: border-box;
+*::before::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#header{
-  position: fixed;
-  background-color: rgb(175, 0, 0);
-  width: 100%;
-  top: 0;
-  left: 0;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    font-size: 1.7rem;
 }
 
-#navbar{
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 20px;
-  margin: 0;
+header {
+    display:block;
+    position: fixed;
+    text-align: center;
+    justify-content: flex-end;
+    align-items:center;
+    background: #be3144;  
+    color: white;
+    width: 100%;
 }
 
-.navbar-ul{
-  display: flex;
-  font-size: 1.5rem;
-  list-style: none;
-  text-decoration: none ;
-  gap: 10px;
-  margin: 20px;
+header > ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    height: 100%;
+    margin:0;
+    margin-right: 1em; 
 }
 
+header > ul > li > a {
+    display: block;
+    font-size: 2rem;
+    padding:0.3em 0.3em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
 
 #welcome-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 1000%;
-  height: 100vh;
-  background-color: #000;
-  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
-  left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0c0a16;
+    text-align: center;
+    font-size: 30px;
+}
+
+h1 {
+    color: #f4f4f4;
+    padding-top:10px;
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+#welcome-section p {
+    color:  #be3144;
+    font-size: 30px;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 0;
+}
+
+#projects {
+    align-content: center;
+    padding: 10rem 4rem;
+    text-align: center;
+    background-color:#45567d;
+}
+
+#projects > h2{
+    margin: 0 auto 4rem auto;
+    color:white;
+    margin-bottom: 100px;
+    margin-top: 0;
+}
+
+#projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));;
+    grid-gap: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.project-tile {
+    margin-bottom: 20px;
+    border-radius: 0px 0px 30px 30px;
+    width: 100%;
+    border: 2px solid black;
+    box-shadow: 10px 10px 10px black;
+}
+
+.project-image {
+    height: calc(100% - 6.25rem);
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-tile > a {
+    text-decoration: none;
+}
+
+.project-tile > p {
+    color:white;
+    font-size: 1.5rem;
+}
+
+.show-all {
+    color:white;
+    width: 6em;
+    font-size: 3rem;
+    padding: 0.5rem 0.7rem;
+    background: rgb(31, 30, 30);
+    text-decoration: none;
+    font-family: "Merriweather", serif;
+}
+
+.show-all > a {
+    font-size: 15px;
+}
+
+.show-all:hover{
+    background: #be3144;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #f4f4f4;
+    background-color: #303841;;
+    border-bottom: solid rgba(255, 0, 0, 0.644) 5px;
+    list-style-type: none;
+    text-align: center;
+    height: 80vh;
+    padding: 20px 0;
+    font-size: 1.8rem;
+}
+
+#contact > h2{
+    max-width: 450px;
+    font-size: 40px;
+    margin: 0 auto 0 auto;
+    color:white;
+}
+
+ul {
+    padding: 0;
+}
+
+#container-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#contact  a{
+    justify-content: center;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 1rem 2rem;
+
+}
+
+#contact  a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #f4f4f4;
+}
+
+#contact  a  i {
+    padding-right: 7px;
+}
+
+.profile-link:hover {
+    transform: translateY(8px);
+}
+
+.profile-link {
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;  
+}
+
+footer {
+    display: flex;
+    text-align: center;
+    padding: 20px;
+    background-color: #303841;
+    color: #f4f4f4;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 800px) {
+    #projects-grid {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
