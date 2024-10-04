@@ -147,6 +147,10 @@ h1 {
     transition-duration: 0.8s;
 }
 
+.project-title, .code:not(:hover){
+    color: #45567d;
+    transition-duration: 0.8s;
+}
 
 
 
@@ -167,6 +171,17 @@ h1 {
 .show-all:hover{
     background: #be3144;
     transition-duration: 1s;
+}
+
+
+.show-all:hover > i{
+    transform: translateX(10px);
+    transition-duration: 0.5s;
+}
+
+.show-all:not(:hover) > i{
+    transform: translateX(0px);
+    transition-duration: 0.5s;
 }
 
 #contact {
